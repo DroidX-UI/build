@@ -421,8 +421,6 @@ endif # !user_variant
 ifeq (true,$(strip $(enable_target_debugging)))
   # Target is more debuggable and adbd is on by default
   ADDITIONAL_SYSTEM_PROPERTIES += ro.debuggable=1
-  # Enable Dalvik lock contention logging.
-  ADDITIONAL_SYSTEM_PROPERTIES += dalvik.vm.lockprof.threshold=500
 else # !enable_target_debugging
   # Target is less debuggable and adbd is off by default
   ADDITIONAL_SYSTEM_PROPERTIES += ro.debuggable=0
@@ -444,6 +442,8 @@ ifndef is_sdk_build
 endif
 # b/323566535
 ADDITIONAL_SYSTEM_PROPERTIES += init.svc_debug.no_fatal.zygote=true
+# Enable Dalvik lock contention logging.
+ADDITIONAL_SYSTEM_PROPERTIES += dalvik.vm.lockprof.threshold=500
 endif
 
 ## asan ##
