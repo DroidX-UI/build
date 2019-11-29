@@ -154,7 +154,7 @@ function check_product()
         echo "Couldn't locate the top of the tree.  Try setting TOP." >&2
         return
     fi
-    if (echo -n $1 | grep -q -e "^droidx_) ; then
+    if (echo -n $1 | grep -q -e "^droidx_") ; then
         DROIDX_BUILD=$(echo -n $1 | sed -e 's/^droidx_//g')
     else
         DROIDX_BUILD=
