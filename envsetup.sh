@@ -2009,4 +2009,3 @@ fi
 
 export ANDROID_BUILD_TOP=$(gettop)
 
-. $ANDROID_BUILD_TOP/vendor/droidx/build/envsetup.sh
