@@ -275,7 +275,7 @@ ifeq ($(TARGET_RELEASE),)
     # Instead of leaving this string empty, we want to default to a valid
     # setting.  Full builds coming through this path is a bug, but in case
     # of such a bug, we want to at least get consistent, valid results.
-    TARGET_RELEASE = ap4a
+    TARGET_RELEASE = trunk_staging
 endif
 
 # During pass 1 of product config, using a non-existent release config is not an error.
